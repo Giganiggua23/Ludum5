@@ -7,13 +7,13 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject Menu_;
-    public GameObject Settings_;
+    public GameObject Exit_;
 
 
     
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void CancelGame()
@@ -21,17 +21,22 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void NextScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     //----------
 
-    public void Settings()
+    public void ExitReady()
     {
         Menu_.SetActive(false);
-        Settings_.SetActive(true);
+        Exit_.SetActive(true);
     }
-    public void SettingsExit()
+    public void Nope()
     {
         Menu_.SetActive(true);
-        Settings_.SetActive(false);
+        Exit_.SetActive(false);
     }
 
     public void ExitGame()
