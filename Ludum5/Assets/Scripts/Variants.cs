@@ -16,7 +16,13 @@ public class Variants : MonoBehaviour
     string nG = "Ghost";
     public TMP_Text nameP;
 
-    
+    public GameObject n;
+    public GameObject nn;
+    public GameObject child;
+    public GameObject cat;
+    public GameObject nforest;
+    public GameObject nhouse;
+
 
     bool AGE = false;
     bool KILLER = false;    
@@ -28,24 +34,13 @@ public class Variants : MonoBehaviour
    
     bool HAVEUFAMALY1 = false;
 
-    public int j = 0;
+    
 
 
     public void Age()
     {
 
-        nameP.text = name;
-        nameP.color = Color.green;
-
-        chat.text = "how old are you?";
-        NextTextt.SetActive(true);
-        choess.SetActive(false);
-
         
-        
-
-        if (j == 1)
-        {
             nameP.text = nG;
             nameP.color = Color.black;
             int i = Random.Range(1, 3);
@@ -63,13 +58,15 @@ public class Variants : MonoBehaviour
             {
                 AGE = true;
                 chat.text = "28";
+                n.SetActive(true);
             }
             if (AGE1 != true && i == 2)
             {
                 AGE1 = true;
                 chat.text = "41";
+                nn.SetActive(true);
             }
-        }
+        
         
     }
 
@@ -96,11 +93,13 @@ public class Variants : MonoBehaviour
         {
             HAVEUFAMALY = true;
             chat.text = "children";
+            child.SetActive(true);
         }
         if (HAVEUFAMALY1 != true && i == 2)
         {
             HAVEUFAMALY1 = true;
             chat.text = "only cats";
+            cat.SetActive(true);
         }
        
     }
@@ -122,19 +121,16 @@ public class Variants : MonoBehaviour
         {
             KILLER = true;
             chat.text = "forest";
+            nforest.SetActive(true);
         }
         if (KILLER1 != true && i == 2)
         {
             KILLER1 = true;
             chat.text = "house";
+            nhouse.SetActive(true);
 
         }
     }
 
-    public void NextN()
-    {
-        NextTextt.SetActive(false);
-        choess.SetActive(true);
-        j = 1;
-    }
+    
 }

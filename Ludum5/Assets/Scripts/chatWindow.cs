@@ -8,7 +8,7 @@ public class chatWindow : MonoBehaviour
 {
     public TMP_Text chat;
     public TMP_Text nameP;
-    public Color TextColor;
+    //public Color TextColor;
     
 
     public GameObject NextTextt;
@@ -18,7 +18,7 @@ public class chatWindow : MonoBehaviour
     string nS = "Sectant";
     string nG = "Ghost";
 
-    int i;
+    int i= 0;
 
     void Start()
     {
