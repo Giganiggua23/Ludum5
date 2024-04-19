@@ -14,15 +14,13 @@ public class chatWindow : MonoBehaviour
     public GameObject NextTextt;
     public GameObject ready;
 
-    string name = "Detectiv";
-    string nS = "Sectant";
-    string nG = "Ghost";
+    
 
     int i= 0;
 
     void Start()
     {
-        nameP.text = nS;
+        nameP.text = "Detectiv";
         nameP.color = Color.red;
         chat.text = "- Welcome, we understand that this is probably your first experience interacting with the board, so listen carefully to the instructions.\r\nYou are required to:\r\nask questions and write down answers.";
         //- ƒобро пожаловать, мы понимаем, что, веро€тно, это ваш первый опыт взаимодействи€ с доской, так что слушайте внимательнее инструкции. 
@@ -35,7 +33,7 @@ public class chatWindow : MonoBehaviour
     {
         if (i == 1)
         {
-            nameP.text = nS;
+            
             nameP.color = Color.red;
             chat.text = "The Spirit will not repeat twice.\r\nIf the spirit's speech is poorly intelligible, I will suggest their past answers.\r\nPerhaps this will help you in choosing a question.\r\nWe cannot completely control contact, so from time to time another spirit may come to you. There is no way we can help with this.";
             //ƒух не будет повтор€ть дважды. 
@@ -45,7 +43,7 @@ public class chatWindow : MonoBehaviour
         }
         if (i == 2)
         {
-            nameP.text = nS;
+            
             nameP.color = Color.red;
             chat.text = "Start connecting with spirit?";
             //Ќачать соединение с духом? 

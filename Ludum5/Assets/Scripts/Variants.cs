@@ -7,130 +7,102 @@ using UnityEngine.UI;
 public class Variants : MonoBehaviour
 {
     public TMP_Text chat;
-    public GameObject NextTextt;
 
-    public GameObject choess;
-
-    string name = "Detectiv";
-    string nS = "Sectant";
-    string nG = "Ghost";
-    public TMP_Text nameP;
-
-    public GameObject n;
-    public GameObject nn;
-    public GameObject child;
-    public GameObject cat;
-    public GameObject nforest;
-    public GameObject nhouse;
-
-
-    bool AGE = false;
-    bool KILLER = false;    
-     
-    bool HAVEUFAMALY = false;
-
-    bool AGE1 = false;
-    bool KILLER1 = false;
-   
-    bool HAVEUFAMALY1 = false;
+    public TMP_Text Tage;
+    public TMP_Text Tplace;
+    public TMP_Text Tfamaly;
 
     
+    bool iage = false;
+    bool iplace = false;
+    bool ifamaly = false;
 
+    bool iage2 = false;
+    bool iplace2 = false;
+    bool ifamaly2 = false;
+
+    void Update()
+    {
+        
+    }
 
     public void Age()
     {
-
-        
-            nameP.text = nG;
-            nameP.color = Color.black;
-            int i = Random.Range(1, 3);
-
-            if (i == 1 && AGE == true)
-            {
-                chat.text = ". . .";
-            }
-            if (i == 2 && AGE1 == true)
-            {
-                chat.text = ". . .";
-            }
-
-            if (AGE != true && i == 1)
-            {
-                AGE = true;
-                chat.text = "28";
-                n.SetActive(true);
-            }
-            if (AGE1 != true && i == 2)
-            {
-                AGE1 = true;
-                chat.text = "41";
-                nn.SetActive(true);
-            }
-        
-        
-    }
-
-    public void KIller()
-    {
-            chat.text = ". . . , you might ask \"where was he\" there is no need to mention death. You don't know how to talk to victims.";
-        
-    }
-
-    public void HAVeufm()
-    {
         int i = Random.Range(1, 3);
-
-        if (i == 1 && HAVEUFAMALY == true)
+        if (i == 1 && iage == true)
         {
             chat.text = ". . .";
         }
-        if (i == 2 && HAVEUFAMALY1 == true)
+        if (i == 2 && iage2 == true)
         {
             chat.text = ". . .";
         }
 
-        if (HAVEUFAMALY != true && i == 1)
+        if (i == 1 && iage == false)
         {
-            HAVEUFAMALY = true;
-            chat.text = "children";
-            child.SetActive(true);
+            iage = true;
+            chat.text = "28";
+            Tage.text += " 28";
         }
-        if (HAVEUFAMALY1 != true && i == 2)
+        if (i == 2 && iage2 == false)
         {
-            HAVEUFAMALY1 = true;
-            chat.text = "only cats";
-            cat.SetActive(true);
+            iage2 = true;
+            chat.text = "41";
+            Tage.text += " 41";
         }
-       
+        
     }
 
-    public void wud()
+    public void Place()
     {
-        int i = Random.Range(1, 3);
-
-        if (i == 1 && KILLER == true)
+        int j = Random.Range(1, 3);
+        if (j == 1 && iplace == true)
         {
             chat.text = ". . .";
         }
-        if (i == 2 && KILLER1 == true)
+        if (j == 2 && iplace2 == true)
         {
             chat.text = ". . .";
         }
-
-        if (KILLER != true && i == 1)
+        
+        if (j == 1 && iplace == false)
         {
-            KILLER = true;
+            iplace = true;
             chat.text = "forest";
-            nforest.SetActive(true);
+            Tplace.text += " forest";
         }
-        if (KILLER1 != true && i == 2)
+        if (j == 2 && iplace2 == false)
         {
-            KILLER1 = true;
+            iplace2 = true;
             chat.text = "house";
-            nhouse.SetActive(true);
-
+            Tplace.text += " house";
         }
+        
     }
-
-    
+    public void Famaly()
+    {
+        int l = Random.Range(1, 3);
+        if (l == 1 && ifamaly == true)
+        {
+            chat.text = ". . .";
+        }
+        if (l == 2 && ifamaly2 == true)
+        {
+            chat.text = ". . .";
+        }
+        
+        if (l == 1 && ifamaly == false)
+        {
+            ifamaly = true;
+            chat.text = "children";
+            Tfamaly.text += " children";
+        }
+        if(l == 2 && ifamaly2 == false)
+        {
+            ifamaly2 = true;
+            chat.text = "only cats";
+            Tfamaly.text += " only cats";
+        }
+        
+    }
 }
